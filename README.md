@@ -23,6 +23,8 @@ There are scripts to build and run the code in the `bin` folder.
 
 ### Usage
 
+This reads the slack token from a file called `token` in the root directory of the project. This must be present.
+
 ```bash
 ➜ bin/clean
 ➜ bin/build
