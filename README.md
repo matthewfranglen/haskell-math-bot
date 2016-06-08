@@ -1,4 +1,5 @@
-Haskell Math Bot ----------------
+Haskell Math Bot
+----------------
 
 This is a slack bot that does math. It understands integers and the operations
 add, subtract, multiply and divide. Division is integerwise.
