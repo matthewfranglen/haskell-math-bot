@@ -10,6 +10,8 @@ one and say it.
 It uses the arbitrary precision `Integer` type for tracking this value, so the
 numbers it can calculate can get very large.
 
+It will exit immediately with an error if it cannot handle a statement.
+
 ### Layout
 
 Application code goes in `src` and the entry point is the `main` method of `src/Main.hs`.
