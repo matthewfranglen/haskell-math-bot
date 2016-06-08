@@ -18,7 +18,7 @@ cabal-version:       >=1.10
 executable haskell-math-bot
   main-is:             Main.hs
   ghc-options:         -Wall -threaded
-  other-modules:       Apply, Evaluate
+  other-modules:       Apply, Evaluate, State
   -- other-extensions:    
   build-depends:       base >=4.8 && <4.9, slack-api, text, lens
   hs-source-dirs:      src

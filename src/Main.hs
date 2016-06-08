@@ -1,5 +1,4 @@
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE TemplateHaskell #-}
 module Main
     (
         main
@@ -14,12 +13,9 @@ import Web.Slack.Message (sendMessage)
 
 import Evaluate (evaluate)
 import Apply (apply)
+import State
 
 import Control.Lens
-
-data State = State { _value :: Integer }
-
-makeLenses ''State
 
 main :: IO ()
 main = do
