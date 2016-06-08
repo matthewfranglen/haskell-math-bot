@@ -1,0 +1,34 @@
+#!/bin/bash
+
+set -euo pipefail
+
+COMMAND=`readlink -f "${0}"`
+BIN_DIRECTORY=`dirname "${COMMAND}"`
+. "${BIN_DIRECTORY}/lib"
+
+main () {
+    check_environment
+    remove_images
+}
+
+check_environment () {
+    if no_stack_command
+    then
+        error_missing_stack
+        exit 1
+    fi
+}
+
+remove_images () {
+    (
+        cd "${ROOT_DIRECTORY}"
+
+        local name=`get_project_name`
+
+        echo "Removing ${name}"
+
+        stack clean
+    )
+}
+
+main

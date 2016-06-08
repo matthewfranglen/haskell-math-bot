@@ -1,0 +1,36 @@
+#!/bin/bash
+
+set -euo pipefail
+
+COMMAND=`readlink -f "${0}"`
+BIN_DIRECTORY=`dirname "${COMMAND}"`
+. "${BIN_DIRECTORY}/lib"
+
+main () {
+    check_environment
+    build
+}
+
+check_environment () {
+    if no_stack_command
+    then
+        error_missing_stack
+        exit 1
+    fi
+}
+
+build () {
+    (
+        cd "${ROOT_DIRECTORY}"
+
+        local name=`get_project_name`
+        local version=`get_project_version`
+
+        echo "Building ${name}:${version}"
+
+        [ ! -e stack.yaml ] && stack init --solver --install-ghc
+        stack build
+    )
+}
+
+main
