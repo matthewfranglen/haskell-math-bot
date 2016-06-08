@@ -7,13 +7,13 @@ module Main
 
 import qualified Data.Text as T (pack, unpack)
 
-import Web.Slack (runBot, SlackBot, Event( Message ), userState )
-import Web.Slack.Config
+import Web.Slack (runBot, SlackBot, Event( Message ), userState)
+import Web.Slack.Config (SlackConfig(..))
 import Web.Slack.Message (sendMessage)
 
 import Evaluate (evaluate)
 import Apply (apply)
-import State
+import State (State(..), value)
 
 import Control.Lens
 
