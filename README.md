@@ -49,3 +49,26 @@ This removes any downloaded dependencies or compiled code.
 #### bin/start
 
 This starts the slack bot.
+
+### Example
+
+Here is an example of using the bot.
+
+![Example of Bot](doc/example-1.png)
+
+Just saying a constant makes the bot repeat it, and thus resets the number.
+
+![Example of Bot](doc/example-2.png)
+
+The examples of adding, dividing and multiplying the current number work by
+replacing the missing number with the last value.
+
+![Example of Bot](doc/example-3.png)
+
+A chain of operations is evaluated right to left. So the chain becomes
+`12 * (10 + (4 / 2))` which is `12 * 12`.
+
+![Example of Bot](doc/example-4.png)
+
+You are not restricted to one missing value, so `multiply` will multiply the
+current value _by itself_.
