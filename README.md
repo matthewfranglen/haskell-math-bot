@@ -42,6 +42,10 @@ Use Control-C to stop it.
 
 This downloads the stack dependencies and builds the code.
 
+This does not run `stack setup` which is required if you lack the version of
+GHC that this is expecting (7.10). This command will tell you if that is the
+case.
+
 #### bin/clean
 
 This removes any downloaded dependencies or compiled code.
