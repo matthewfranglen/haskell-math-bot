@@ -1,6 +1,8 @@
 Haskell Math Bot
 ----------------
 
+![Eval Apply](doc/sicp-cover.jpg)
+
 This is a slack bot that does math. It understands integers and the operations
 add, subtract, multiply and divide. Division is integerwise.
 
