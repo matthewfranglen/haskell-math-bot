@@ -2,7 +2,7 @@ Haskell Math Bot
 ----------------
 
 <p align="center">
-![Eval Apply](doc/sicp-cover.jpg)
+    <img src="doc/sicp-cover.jpg" alt="Eval Apply" />
 </p>
 
 This is a slack bot that does math. It understands integers and the operations
