@@ -24,9 +24,7 @@ main = do
     where startState = State 0
 
 readToken :: IO String
-readToken = do
-    token <- readFile "token"
-    return $ lines token !! 0
+readToken = readFile "token" >>= return . (!! 0) . lines
 
 makeConfig :: String -> SlackConfig
 makeConfig token = SlackConfig { _slackApiToken = token }
