@@ -76,3 +76,10 @@ A chain of operations is evaluated right to left. So the chain becomes
 
 You are not restricted to one missing value, so `multiply` will multiply the
 current value _by itself_.
+
+### Grammar
+
+A definition for the grammar that this uses to parse the expression, written
+for ANTLR, can be found [here](doc/BotGrammar.g4). I have not checked if it is
+left or right associative so it may parse composite statements differently, but
+it should give an idea of the complexity of the parse.
